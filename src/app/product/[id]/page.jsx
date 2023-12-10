@@ -8,13 +8,13 @@ import React from 'react'
 export default function ProductDetailPage({ params: { id } }) {
   const product = data.products.find((x) => x.id === id)
   if (!product) {
-    return <div>Product not found!</div>
+    return <div>상품이 존재하지 않습니다!</div>
   }
   return (
     <div>
       <div className="py-2">
         <Link href="/" className="font-bold">
-          Back to Products
+          상품으로 돌아가기
         </Link>
       </div>
 
@@ -40,7 +40,7 @@ export default function ProductDetailPage({ params: { id } }) {
             </li>
             <li>
               <hr className="my-3" />
-              Description:
+              상품설명:
               <p>{product.description}</p>
             </li>
           </ul>
@@ -49,7 +49,7 @@ export default function ProductDetailPage({ params: { id } }) {
         <div>
           <div className="card p-5">
             <div className="mb-2 flex justify-between">
-              <div>Price</div>
+              <div>가격</div>
               <div>${product.price}</div>
             </div>
             <AddToCart product={product} redirect={true} />

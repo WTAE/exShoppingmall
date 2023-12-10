@@ -20,13 +20,13 @@ export default function CartPage() {
   }
   return (
     <div>
-      <h1 className="mb-4 text-xl">Shopping Cart</h1>
+      <h1 className="mb-4 text-xl">담아둔 상품</h1>
 
       {loading ? (
-        <div>Loading...</div>
+        <div>로딩 중입니다...</div>
       ) : cartItems.length === 0 ? (
         <div>
-          Cart is empty. <Link  className="text-blue-500" href="/">Go shopping</Link>
+          카트가 비어있습니다. <Link  className="text-blue-500" href="/">다시 쇼핑하러가기</Link>
         </div>
       ) : (
         <div className="grid md:grid-cols-4 md:gap-5">
@@ -34,10 +34,10 @@ export default function CartPage() {
             <table className="min-w-full ">
               <thead className="border-b">
                 <tr>
-                  <th className="p-5 text-left">Product</th>
-                  <th className="p-5 text-right">Quantity</th>
-                  <th className="p-5 text-right">Price</th>
-                  <th className="p-5">Action</th>
+                  <th className="p-5 text-left">상품</th>
+                  <th className="p-5 text-right">수량</th>
+                  <th className="p-5 text-right">가격</th>
+                  <th className="p-5">주문 삭제</th>
                 </tr>
               </thead>
               <tbody>
@@ -78,7 +78,7 @@ export default function CartPage() {
                         className="default-button"
                         onClick={() => removeFromCartHandler(item.id)}
                       >
-                        Delete
+                        삭제
                       </button>
                     </td>
                   </tr>
@@ -91,7 +91,7 @@ export default function CartPage() {
               <ul>
                 <li>
                   <div className="pb-3 text-xl">
-                    Subtotal ({cartItems.reduce((a, c) => a + c.qty, 0)}) : $
+                    주문 합계 ({cartItems.reduce((a, c) => a + c.qty, 0)}) : $
                     {itemsPrice}
                   </div>
                 </li>
@@ -100,7 +100,7 @@ export default function CartPage() {
                     onClick={() => router.push('/shipping')}
                     className="primary-button w-full"
                   >
-                    Proceed to checkout
+                    결제 확정하러가기
                   </button>
                 </li>
               </ul>

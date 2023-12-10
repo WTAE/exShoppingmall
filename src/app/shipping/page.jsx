@@ -40,9 +40,9 @@ export default function ShippingAddressPage() {
         className="mx-auto max-w-screen-md"
         onSubmit={handleSubmit(submitHandler)}
       >
-        <h1 className="mb-4 text-xl font-bold">Shipping Address</h1>
+        <h1 className="mb-4 text-xl font-bold">주문 주소</h1>
         <div className="mb-4">
-          <label htmlFor="fullName">Full Name</label>
+          <label htmlFor="fullName">성함</label>
           <input
             className="w-full"
             id="fullName"
@@ -57,7 +57,7 @@ export default function ShippingAddressPage() {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="address">Address</label>
+          <label htmlFor="address">주소</label>
           <input
             className="w-full"
             id="address"
@@ -76,7 +76,7 @@ export default function ShippingAddressPage() {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="city">City</label>
+          <label htmlFor="city">도시</label>
           <input
             className="w-full"
             id="city"
@@ -91,7 +91,7 @@ export default function ShippingAddressPage() {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="postalCode">Postal Code</label>
+          <label htmlFor="postalCode">우편주소</label>
           <input
             className="w-full"
             id="postalCode"
@@ -106,7 +106,7 @@ export default function ShippingAddressPage() {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="country">Country</label>
+          <label htmlFor="country">국가</label>
           <input
             className="w-full"
             id="country"

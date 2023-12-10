@@ -7,7 +7,7 @@ export default function ProductRate({rate, count}) {
   return (
     <div className='flex'>
         <Rating style={{ maxWidth : 100 }} value={rate} readOnly /> 
-        {count} reviews 
+        {count} 개의 리뷰들 
     </div>
   )
 }

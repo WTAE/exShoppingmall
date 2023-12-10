@@ -30,7 +30,7 @@ export default function PaymentPage() {
     router.push('/placeorder')
   }
 
-  const payments = ['PayPal', 'Stripe',' CashOnDelivery','KakaoPay', 'NaverPay']
+  const payments = ['PayPal', 'Stripe',' 배달 시 현금 결제','카카오페이', '네이버페이']
 
   return (
     <div>
@@ -40,7 +40,7 @@ export default function PaymentPage() {
         className="mx-auto max-w-screen-md"
         onSubmit={handleSubmit(submitHandler)}
       >
-        <h1 className="mb-4 text-xl font-bold">Payment Method</h1>
+        <h1 className="mb-4 text-xl font-bold">결제 방식</h1>
         {payments.map((payment) => (
           <div key={payment} className="mb-4">
             <input
@@ -64,7 +64,7 @@ export default function PaymentPage() {
 
         <div className="mb-4 flex justify-between">
           <button type="submit" className="primary-button">
-            Next
+            다음
           </button>
         </div>
       </form>
